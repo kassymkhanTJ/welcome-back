@@ -59,11 +59,14 @@ $('#countdown').countdown({
 	date: "May 24 2021",
 	render: function(data) {
 	  var el = $(this.el);
-	  el.empty()
-	    //.append("<div>" + this.leadingZeros(data.years, 4) + "<span>years</span></div>")
-	    .append("<div>" + this.leadingZeros(data.days, 2) + " <span>days</span></div>")
-	    .append("<div>" + this.leadingZeros(data.hours, 2) + " <span>hrs</span></div>")
-	    .append("<div>" + this.leadingZeros(data.min, 2) + " <span>min</span></div>")
-	    .append("<div>" + this.leadingZeros(data.sec, 2) + " <span>sec</span></div>");
-	}
+	  if (data.days == 0 && data.hours == 0 && data.min == 0 && data.sec == 0 ) {
+		el.empty().append('<div>halty@ is back!</div>')
+	  } else {
+	  	  el.empty()
+	  	    //.append("<div>" + this.leadingZeros(data.years, 4) + "<span>years</span></div>")
+	  	    .append("<div>" + this.leadingZeros(data.days, 2) + " <span>days</span></div>")
+	  	    .append("<div>" + this.leadingZeros(data.hours, 2) + " <span>hrs</span></div>")
+	  	    .append("<div>" + this.leadingZeros(data.min, 2) + " <span>min</span></div>")
+	  	    .append("<div>" + this.leadingZeros(data.sec, 2) + " <span>sec</span></div>");
+	  	}}
 });
