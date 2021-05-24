@@ -480,9 +480,6 @@ $(window).load(function(){
 
 	var strToDate = new Date(date);
 	if (strToDate < Date.now()) {
-		var el = $(this.el);
-		el.empty().append('<div>halty@ is back!</div>');
-		$('#sub-title-id').empty();
 		loop();
 	}
 
