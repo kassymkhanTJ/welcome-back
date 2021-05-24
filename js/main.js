@@ -473,7 +473,7 @@ function initializeSite() {
 /* =Document Ready Trigger
 -------------------------------------------------------------- */
 
-var date = "May 24 2021 22:00";
+var date = "May 24 2021 22:42";
 
 
 $(window).load(function(){
@@ -502,6 +502,7 @@ $('#countdown').countdown({
 	  if (data.days == 0 && data.hours == 0 && data.min == 0 && data.sec == 0 ) {
 		el.empty().append('<div>halty@ is back!</div>')
 		$('#sub-title-id').empty()
+		loop();
 	  } else {
 	  	  el.empty()
 	  	    //.append("<div>" + this.leadingZeros(data.years, 4) + "<span>years</span></div>")
