@@ -473,7 +473,7 @@ function initializeSite() {
 /* =Document Ready Trigger
 -------------------------------------------------------------- */
 
-var date = "May 24 2021 22:42";
+var date = "May 24 2021 22:45";
 
 
 $(window).load(function(){
