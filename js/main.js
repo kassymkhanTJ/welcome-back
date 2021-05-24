@@ -56,11 +56,12 @@ $(window).load(function(){
 
 
 $('#countdown').countdown({
-	date: "May 24 2021",
+	date: "May 25 2021 12:00",
 	render: function(data) {
 	  var el = $(this.el);
 	  if (data.days == 0 && data.hours == 0 && data.min == 0 && data.sec == 0 ) {
 		el.empty().append('<div>halty@ is back!</div>')
+		$('#sub-title-id').empty()
 	  } else {
 	  	  el.empty()
 	  	    //.append("<div>" + this.leadingZeros(data.years, 4) + "<span>years</span></div>")
